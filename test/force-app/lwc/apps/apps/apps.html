@@ -1,13 +1,18 @@
 <template>
-    <div>
-       user:
-      
+    <div style="float: right;">
+    <template for:each={OwnNameData.data} for:item = "data">
+        <p key = {data.id}>
+            user:{data.Name}
+        </p>
+    </template>
+   </div>
+   <br/>
+    <div style="float: right;">
+        <!-- <p><lightning-formatted-date-time value="1547250828000"></lightning-formatted-date-time></p> -->
+        {timed.data}
     </div>
-
-    <div>
-        <!-- time = {realSysTime} -->
-    </div>
-
+    <br/>
+    <br/>
     <div style="height: 300px;">
         <lightning-datatable
                 key-field="id"
