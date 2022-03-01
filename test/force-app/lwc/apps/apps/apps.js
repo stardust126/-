@@ -32,4 +32,18 @@ export default class Apps extends LightningElement {
         console.log(timed.data);
     }
 
+    handleClick(){
+        console.log(11);
+        let button1 = this.template.querySelector('[data-id="button1"]');
+        let button2 = this.template.querySelector('[data-id="button2"]');
+        button1.variant = 'brand';
+        button2.variant = 'Neutral';
+    }
+    handleClick2(){
+        console.log(22);
+        let button2 = this.template.querySelector('[data-id="button2"]');
+        let button1 = this.template.querySelector('[data-id="button1"]');
+        button1.variant = 'Neutral';
+        button2.variant = 'brand';
+    }
 }
