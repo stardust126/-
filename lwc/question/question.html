@@ -1,6 +1,99 @@
-<template>
-    <lightning-datatable key-field="Id" data={tabledata} columns={columns} hide-checkbox-column>
-
-    </lightning-datatable>
+<template >
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Question">Question</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Answer">Answer</div>
+                </th>
+            </tr>
+        </thead>
+        <template for:each={questionsHandler.data} for:item="question">
+            <tbody key={question.Id}>
+                <tr>
+                    <th>
+                        {question.Question1__c}
+                    </th>
+                    <th>
+                        {question.Answer1__c}
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        {question.Question2__c}
+                    </th>
+                    <th>
+                        {question.Answer2__c}
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        {question.Question3__c}
+                    </th>
+                    <th>
+                        {question.Answer3__c}
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        {question.Question4__c}
+                    </th>
+                    <th>
+                        {question.Answer4__c}
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        {question.Question5__c}
+                    </th>
+                    <th>
+                        {question.Answer5__c}
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        {question.Question6__c}
+                    </th>
+                    <th>
+                        {question.Answer6__c}
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        {question.Question7__c}
+                    </th>
+                    <th>
+                        {question.Answer7__c}
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        {question.Question8__c}
+                    </th>
+                    <th>
+                        {question.Answer8__c}
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        {question.Question9__c}
+                    </th>
+                    <th>
+                        {question.Answer9__c}
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        {question.Question10__c}
+                    </th>
+                    <th>
+                        {question.Answer10__c}
+                    </th>
+                </tr>
+            </tbody>
+        </template>
+    </table>
 </template>
 

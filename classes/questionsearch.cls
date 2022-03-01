@@ -5,6 +5,7 @@ public with sharing class questionsearch {
     @AuraEnabled(cacheable=true)
     public static List<survey__c> findQuestions(){
         List<survey__c> surveylist= [SELECT 
+        Id,
         Answer1__c,	Question1__c,
         Answer2__c,	Question2__c,
         Answer3__c,	Question3__c,
