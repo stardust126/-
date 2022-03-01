@@ -4,9 +4,26 @@ public with sharing class survey {
     public static List<Survey__C> getSurvey() {
        // System.debug(Name);
         return [
-            SELECT Id, Name, Catogery1__c, Catogery2__c,Catogery3__c,Catogery4__c,Catogery5__c,Catogery6__c
+            SELECT Id, Name,ownerid, Catogery1__c, Catogery2__c,Catogery3__c,Catogery4__c,Catogery5__c,Catogery6__c
             ,Catogery7__c,Catogery8__c,Catogery10__c
             FROM Survey__C
         ];
+    }
+
+    @AuraEnabled(cacheable=true)
+    Public Static List<User> getOwnerName(String ids){
+        // System.debug('name');
+        return [
+            SELECT Name  
+            FROM User
+            WHERE Id = :ids
+        ];
+    }
+
+    @AuraEnabled(cacheable=true)
+    public Static Datetime times(){
+        system.debug(system.now().addHours(8));
+        Datetime timed = system.now().addHours(8);
+        return timed;
     }
 }
