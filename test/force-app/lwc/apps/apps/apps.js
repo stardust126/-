@@ -1,7 +1,7 @@
 import { api, LightningElement,wire } from 'lwc';
 import getSurvey from '@salesforce/apex/survey.getSurvey';
 import getOwnerName from '@salesforce/apex/survey.getOwnerName';
-import times from '@salesforce/apex/survey.times';
+// import times from '@salesforce/apex/survey.times';
 import CURRENTUSERID from '@salesforce/user/Id';
 
 const columns = [
@@ -22,15 +22,17 @@ const columns = [
 export default class Apps extends LightningElement {
     @wire(getSurvey) data;
     @wire(getOwnerName,{ids:'$currentUserId'}) OwnNameData;
-    @wire(times) timed;
+    // @wire(times) timed;
+    timed = new Date().getFullYear()+ '年' + (new Date().getUTCMonth() + 1)+ '月' + (new Date().getUTCDay() - 1) + '日' + ' ' + (new Date().getUTCHours() + 8) + ':' + new Date().getUTCMinutes();
     columns = columns;
     currentUserId = CURRENTUSERID;
 
-    time(){
+    // time(){
+         
+    //     console.log(1);
         
-        console.log(1);
-        console.log(timed.data);
-    }
+    //     // console.log(timed.data);
+    // }
 
     handleClick(){
         console.log(11);
