@@ -2,6 +2,7 @@ import { LightningElement, track, wire } from 'lwc';
 import findQuestions from '@salesforce/apex/questionController.findQuestions';
 
 const COLS = [
+    { label: 'No.', fieldName: 'No__c'},
     { label: 'Question1', fieldName: 'Question1__c'},
     { label: 'Category1', fieldName: 'Category1__c' },
     { label: 'Answer1', fieldName: 'Answer1__c' },
