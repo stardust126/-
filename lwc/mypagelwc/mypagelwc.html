@@ -1,0 +1,33 @@
+<template>
+    <div style="float: right;">日時:{timed}</div>
+    <div class="slds-m-vertical_medium">
+        <h1 class="slds-text-heading_small">question</h1>
+        <lightning-textarea data-id = 'question' name="question1" readonly value="インスタントラーメンは200円で売れますか"></lightning-textarea>
+        <!--
+        <lightning-textarea name="question2" readonly value="来客はモバイルで支払うのに慣れていますか"></lightning-textarea>
+        <lightning-textarea name="question3" readonly value="週末は交通量が多いですか"></lightning-textarea>
+    -->
+    </div>
+    
+    <div class="slds-m-top_small slds-m-bottom_medium">
+
+        <h2 class="slds-text-heading_small slds-m-bottom_small">Anwser</h2>
+
+        <lightning-button data-id = 'button1' variant="Neutral" label="Yes" title="Primary action" onclick={changeToBuleYes} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button data-id = 'button2' variant="Neutral" label="no" title="Primary action with lighter look" onclick={changeToBuleNo} class="slds-m-left_x-small"></lightning-button>
+    </div>
+
+    
+    <div class="slds-m-top_small slds-m-bottom_medium">
+        <lightning-button data-id = 'button3' variant="Neutral" label="<" title="Primary action" onclick={changeToBuleUp} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button data-id = 'button4' variant="Neutral" label=">" title="Primary action with lighter look" onclick={changeToBuleDown} class="slds-m-left_x-small"></lightning-button>
+    </div>
+
+
+    <div class="slds-m-top_small slds-m-bottom_medium">
+        <lightning-button data-id = 'button5' variant="Neutral" label=" 戻る " title="Primary action" onclick={changeBackPageUp} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button data-id = 'button6' variant="brand" label=" 保存 " title="Primary action with lighter look" onclick={changeSave} class="slds-m-left_x-small"></lightning-button>
+    </div>
+    
+
+</template>
