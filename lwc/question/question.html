@@ -1,12 +1,22 @@
 <template >
+    <div style="float: right;background-color: azure;" class="slds-box">
+        <template for:each={NameData.data} for:item = "data">
+        <p key = {data.id}>
+                ログインユーザー：{data.Name}
+        </p>
+        </template>
+        <div style="float: right;">
+            日時:{timed}
+        </div>
+    </div>
     <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
         <thead>
             <tr class="slds-line-height_reset">
-                <th class="" scope="col">
-                    <div class="slds-truncate" title="Question">Question</div>
+                <th>
+                    <div title="Question">Question</div>
                 </th>
-                <th class="" scope="col">
-                    <div class="slds-truncate" title="Answer">Answer</div>
+                <th>
+                    <div title="Answer">Answer</div>
                 </th>
             </tr>
         </thead>

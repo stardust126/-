@@ -3,6 +3,15 @@ public with sharing class questionsearch {
 
     }
     @AuraEnabled(cacheable=true)
+    Public Static List<User> getName(String ids){
+        return [
+            SELECT Name  
+            FROM User
+            WHERE Id = :ids
+        ];
+    }
+
+    @AuraEnabled(cacheable=true)
     public static List<survey__c> findQuestions(){
         List<survey__c> surveylist= [SELECT 
         Id,
