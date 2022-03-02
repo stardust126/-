@@ -1,5 +1,5 @@
 <template >
-    <div style="float: right;background-color: azure;" class="slds-box">
+    <div style="float: right;background-color: azure;margin-bottom: 12px" class="slds-box">
         <template for:each={NameData.data} for:item = "data">
         <p key = {data.id}>
                 ログインユーザー：{data.Name}
@@ -9,9 +9,9 @@
             日時:{timed}
         </div>
     </div>
-    <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+    <table class="slds-table" >
         <thead>
-            <tr class="slds-line-height_reset">
+            <tr>
                 <th>
                     <div title="Question">Question</div>
                 </th>
@@ -20,7 +20,7 @@
                 </th>
             </tr>
         </thead>
-        <template for:each={questionsHandler.data} for:item="question">
+        <template for:each={questionsHandler.data} for:item="question" >
             <tbody key={question.Id}>
                 <tr>
                     <th>
@@ -105,5 +105,10 @@
             </tbody>
         </template>
     </table>
+    <div style="float: right;">
+        <lightning-button variant="Neutral" data-id = 'button1' label="戻る" onclick={handleClick} ></lightning-button>
+
+        <lightning-button variant="Neutral" data-id = 'button2' label="次へ" onclick={handleClick2} ></lightning-button>
+    </div>
 </template>
 
