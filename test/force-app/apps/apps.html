@@ -1,0 +1,129 @@
+<template>
+    <div style="float: right;">
+    <template for:each={OwnNameData.data} for:item = "data">
+        <p key = {data.id}>
+            ログインユーザー：{data.Name}
+        </p>
+    </template>
+   </div>
+   <br/>
+    <div style="float: right;">
+        日時:{timed}
+    </div>
+    <br/><br/><br/>
+    <div style="text-align: center; ">
+        <p style="height: 50px;">
+        <button style=" width: 300px; 
+                        height:40px; 
+                        color:white; 
+                        background-color:#0176D3; 
+                        border-radius:6px; 
+                        border:none" type="button" onclick ={oncl1}>{survey1}</button>
+        </p>
+    </div>
+    <div style="text-align: center; ">
+        <p style="height: 50px;">
+        <button style=" width: 300px; 
+                        height:40px; 
+                        color:white; 
+                        background-color:#0176D3; 
+                        border-radius:6px; 
+                        border:none" type="button" onclick ={oncl2}>{survey2}</button>
+        </p>
+    </div>
+    <div style="text-align: center; ">
+        <p style="height: 50px;">
+        <button style=" width: 300px; 
+                        height:40px; 
+                        color:white; 
+                        background-color:#0176D3; 
+                        border-radius:6px; 
+                        border:none" type="button" onclick ={oncl3}>{survey3}</button>
+        </p>
+    </div>
+    <div style="text-align: center; ">
+        <p style="height: 50px;">
+        <button style=" width: 300px; 
+                        height:40px; 
+                        color:white; 
+                        background-color:#0176D3; 
+                        border-radius:6px; 
+                        border:none" type="button" onclick ={oncl4}>{survey4}</button>
+        </p>
+    </div>
+    <div style="text-align: center; ">
+        <p style="height: 50px;">
+        <button style=" width: 300px; 
+                        height:40px; 
+                        color:white; 
+                        background-color:#0176D3; 
+                        border-radius:6px; 
+                        border:none" type="button" onclick ={oncl5}>{survey5}</button>
+        </p>
+    </div>
+    <div style="text-align: center; ">
+        <p style="height: 50px;">
+        <button style=" width: 300px; 
+                        height:40px; 
+                        color:white; 
+                        background-color:#0176D3; 
+                        border-radius:6px; 
+                        border:none" type="button" onclick ={oncl6}>{survey6}</button>
+        </p>
+    </div>
+    <div style="text-align: center; ">
+        <p style="height: 50px;">
+        <button style=" width: 300px; 
+                        height:40px; 
+                        color:white; 
+                        background-color:#0176D3; 
+                        border-radius:6px; 
+                        border:none" type="button" onclick ={oncl7}>{survey7}</button>
+        </p>
+    </div>
+    <div style="text-align: center; ">
+        <p style="height: 50px;">
+        <button style=" width: 300px; 
+                        height:40px; 
+                        color:white; 
+                        background-color:#0176D3; 
+                        border-radius:6px; 
+                        border:none" type="button" onclick ={oncl8}>{survey8}</button>
+        </p>
+    </div>
+    <div style="text-align: center; ">
+        <p style="height: 50px;">
+        <button style=" width: 300px; 
+                        height:40px; 
+                        color:white; 
+                        background-color:#0176D3; 
+                        border-radius:6px; 
+                        border:none" type="button" onclick ={oncl9}>{survey9}</button>
+        </p>
+    </div>
+    <div style="text-align: center; ">
+        <p style="height: 50px;">
+        <button style=" width: 300px; 
+                        height:40px; 
+                        color:white; 
+                        background-color:#0176D3; 
+                        border-radius:6px; 
+                        border:none" type="button" onclick ={oncl10}>{survey10}</button>
+        </p>
+    </div>
+    <br/>
+    <!-- <div style="height: 300px;">
+        <lightning-datatable
+                key-field="id"
+                show-row-number-column
+                data={data.data}
+                columns={columns}>
+        </lightning-datatable>
+    </div>  -->
+    <div style="float: right;">
+        <lightning-button variant="Neutral" data-id = 'button1' label="戻る" onclick={handleClick} ></lightning-button>
+        <lightning-button variant="Neutral" data-id = 'button2' label="次へ" onclick={handleClick2} ></lightning-button>
+        
+    </div>
+    
+</template>
