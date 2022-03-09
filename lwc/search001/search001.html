@@ -1,0 +1,31 @@
+<template>
+    <lightning-formatted-date-time value={timed}>
+    </lightning-formatted-date-time>
+    
+    <div style="background-color: azure">
+        <template for:each={NameData.data} for:item = "data">
+        <div key = {data.id} style="float: left;">
+                ログインユーザー：{data.Name}
+        </div>       
+        </template>
+    </div>
+
+    <br>
+    <lightning-datatable
+    key-field={id}
+    data={data}
+    columns={columns}
+    >
+    </lightning-datatable> 
+     
+    
+
+    <div style="float:right">
+        <lightning-button variant="Neutral" data-id = 'button1' label="戻る" onclick={handleClick} ></lightning-button>
+
+        <lightning-button variant="Neutral" data-id = 'button2' label="次へ" onclick={handleClick2} ></lightning-button>
+    </div>
+    
+    
+
+</template>

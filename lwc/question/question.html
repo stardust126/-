@@ -1,13 +1,13 @@
 <template >
     <div style="float: right;background-color: azure;margin-bottom: 12px" class="slds-box">
         <template for:each={NameData.data} for:item = "data">
-        <p key = {data.id}>
+        <div key = {data.id} style="float: left;">
                 ログインユーザー：{data.Name}
-        </p>
+        </div>       
         </template>
-        <div style="float: right;">
+        <p>
             日時:{timed}
-        </div>
+        </p>
     </div>
     <table class="slds-table" >
         <thead>
@@ -111,4 +111,3 @@
         <lightning-button variant="Neutral" data-id = 'button2' label="次へ" onclick={handleClick2} ></lightning-button>
     </div>
 </template>
-

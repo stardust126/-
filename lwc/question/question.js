@@ -2,7 +2,7 @@ import { LightningElement, wire } from 'lwc';
 import findQuestions from '@salesforce/apex/questionsearch.findQuestions';
 import getName from '@salesforce/apex/questionsearch.getName';
 import CURRENTUSERID from '@salesforce/user/Id';
-
+import getNowPlusThirty from '@salesforce/apex/MeetingMakerUtil.getNowPlusThirty';
 
 export default class Question extends LightningElement {
     @wire(findQuestions)questionsHandler;
@@ -25,4 +25,6 @@ export default class Question extends LightningElement {
         button1.variant = 'Neutral';
         button2.variant = 'brand';
     }
+
+    
 }
